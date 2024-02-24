@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project web page</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <h2 class="f">Choose a doctor from the available options</h2>
+    <div class="image-grid" id="image-grid"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = [{
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Alex Johnson",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Dentist"
+                }, {
+                    "image": "https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    "name": "Dr. Mary Jane",
+                    "profession": "Doctor"
+                },
+            ];
+            const imageGrid = document.getElementById("image-grid");
+            images.forEach(imageData => {
+                const imageUrl = imageData.image;
+                const name = imageData.name;
+                const profession = imageData.profession;
+                const imageItem = document.createElement("div");
+                imageItem.classList.add("image-item");
+                const imageElement = document.createElement("img");
+                imageElement.src = imageUrl;
+                imageElement.alt = "User Image";
+                const captionElement = document.createElement("div");
+                captionElement.classList.add("name-profession");
+                captionElement.textContent = `${name}, ${profession}`;
+                const buttonElement = document.createElement("button");
+                buttonElement.classList.add("button");
+                buttonElement.innerHTML = `${name} <br> ${profession}`;
+                buttonElement.addEventListener("click", function() {
+                    captionElement.style.display = (captionElement.style.display === "none") ? "block" : "none";
+                });
+                imageItem.appendChild(imageElement);
+                imageItem.appendChild(buttonElement);
+                imageItem.appendChild(captionElement);
+                imageGrid.appendChild(imageItem);
+            });
+        });
+    </script>
+</body>
+
+</html>
