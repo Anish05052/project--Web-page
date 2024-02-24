@@ -1,2 +1,2 @@
 # project--Web-page
-Designed an HTML page loading 25 user images from a JSON array { "image":"url"}. Evaluation focuses on image loading speed and coding practices, with an emphasis on aligning the HTML structure with the provided sample design.
+Created a basic HTML page that loads user images utilizing a JSON structure like this: [ { "image":"url"}]. The JSON array includes 25 image objects, and the evaluation of your test considers the speed at which the images load, as well as adherence to coding best practices. Additionally, efforts were made to align the HTML structure with the provided sample design for enhanced clarity.
